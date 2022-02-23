@@ -1,23 +1,26 @@
 ---
 marp: true
-title: Marp CLI example
-description: Hosting Marp slide deck on the web
-theme: uncover
-paginate: true
-_paginate: false
 ---
 
 ![bg](./assets/gradient.jpg)
 
-# <!--fit--> Marp CLI example
+# <!--fit--> Marp demo
 
-Hosting Marp slide deck on the web
+Hosting Marp slides on GitHub
 
 https://github.com/yhatt/marp-cli-example
 
 <style scoped>a { color: #eee; }</style>
 
 <!-- This is presenter note. You can write down notes through HTML comment. -->
+
+---
+
+# EasyBuild
+
+### 2022-02-23
+
+### https://docs.easybuild.io/en/latest
 
 ---
 
