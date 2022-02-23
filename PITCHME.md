@@ -2,8 +2,6 @@
 marp: true
 ---
 
-![bg](./assets/gradient.jpg)
-
 # <!--fit--> Introduction to PDC
 
 2022-02-23
@@ -25,21 +23,17 @@ marp: true
 
 # HPE/Cray EX system
 
-The system will be installed in 2 phases
-
 ### Phase 1: CPU partition
 
 * 2.279 petaFlops (Top500 Nov 2021)
 * 554 CPU nodes
-* Dual AMD EPYCTM 64-core processors
-* 256, 512, 1024, or 2048 GB memory
+* Dual AMD EPYC<sup>TM</sup> 64-core processors
 
 ### Phase 2: GPU partition
 
 * 56 GPU nodes
-* AMD EPYCTM processor with 64 cores (under development)
-* 512 GB memory
-* four AMD InstinctTM MI250X GPUs
+* AMD EPYC<sup>TM</sup> processor with 64 cores
+* four AMD Instinct<sup>TM</sup> MI250X GPUs
 
 ---
 
@@ -118,6 +112,11 @@ user::rwx
 group::r-x
 other::---
 ```
+
+---
+
+# Access Control Lists
+
 ### To grant the access to another user ("-R" for recursive):
 ```
 setfacl -m u:<uid>:r-x -R /cfs/klemming/home/u/user/test
