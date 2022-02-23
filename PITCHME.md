@@ -4,11 +4,11 @@ marp: true
 
 ![bg](./assets/gradient.jpg)
 
-# <!--fit--> Marp demo
+# <!--fit--> Introduction to PDC
 
-Hosting Marp slides on GitHub
+2022-02-23
 
-https://github.com/yhatt/marp-cli-example
+[Github link]
 
 <style scoped>a { color: #eee; }</style>
 
@@ -16,63 +16,77 @@ https://github.com/yhatt/marp-cli-example
 
 ---
 
-# EasyBuild
+<!-- paginate: true -->
 
+# Introduction to Dardel supercomputer
+![bg 90% left](https://www.pdc.kth.se/polopoly_fs/1.1053343.1614296818!/image/3D%20marketing%201%20row%20cropped%201000pW%20300ppi.jp
+g)
+
+---
+
+# HPE/Cray EX system
+
+The system will be installed in 2 phases
+
+### Phase 1: CPU partition
+
+### Phase 2: GPU partition
+
+---
+
+# Dardel CPU partition
+
+## Processor
+
+Each node has...
+
+* 128 cores
+* Dual AMD EPYC 2.25 Ghz 64 core
+
+## Interconnect
+
+* HPE Slingshot using Dragonfly topology
+* 100 Gb/s first phase
+
+---
+
+# Compute nodes
+
+| Nodes | RAM (GB) | Name |
+| --- | --- | --- |
+| 488 | 256 | Thin |
+| 20 | 512 | Large |
+| 8 | 1024 | Huge |
+| 2 | 2048 | Giant |
+| 36 | 256 | Business |
+| ? | 256 | SCANIA |
+
+Total: **554** Nodes with 128 cores
+
+---
+
+# How to use EasyBuild
+![bg h:150 80% left](https://docs.easybuild.io/en/latest/_static/easybuild_logo_alpha.png)
 ### 2022-02-23
 
-### https://docs.easybuild.io/en/latest
+### https://docs.easybuild.io/en/latest/
 
 ---
 
-![Marp bg 60%](https://raw.githubusercontent.com/marp-team/marp/master/marp.png)
+# What modules are available
 
----
+### For global installations
+```
+module load PDC/21.11
+module load EasyBuild-production/4.5.0
+```
+* Builds into */pdc/software/21.11/eb/*
 
-![bg](#123)
-![](#fff)
-
-##### <!--fit--> [Marp CLI](https://github.com/marp-team/marp-cli) + [GitHub Pages](https://github.com/pages) | [Netlify](https://www.netlify.com/) | [Vercel](https://vercel.com/)
-
-##### <!--fit--> 👉 The easiest way to host<br />your Marp deck on the web
-
----
-
-![bg right 60%](https://icongr.am/octicons/mark-github.svg)
-
-## **[GitHub Pages](https://github.com/pages)**
-
-#### Ready to write & host your deck!
-
-[![Use this as template h:1.5em](https://img.shields.io/badge/-Use%20this%20as%20template-brightgreen?style=for-the-badge&logo=github)](https://github.com/yhatt/marp-cli-example/generate)
-
----
-
-![bg right 60%](https://icongr.am/simple/netlify.svg?colored)
-
-## **[Netlify](https://www.netlify.com/)**
-
-#### Ready to write & host your deck!
-
-[![Deploy to Netlify h:1.5em](./assets/netlify-deploy-button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yhatt/marp-cli-example)
-
----
-
-![bg right 60%](https://icongr.am/simple/zeit.svg)
-
-## **[Vercel](https://vercel.com/)**
-
-#### Ready to write & host your deck!
-
-[![Deploy to Vercel h:1.5em](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/yhatt/marp-cli-example)
-
----
-
-### <!--fit--> :ok_hand:
-
----
-
-![bg 40% opacity blur](https://avatars1.githubusercontent.com/u/3993388?v=4)
-
-### Created by Yuki Hattori ([@yhatt](https://github.com/yhatt))
-
-https://github.com/yhatt/marp-cli-example
+### For local installations
+Good to evaluate prior of global installation and testing purposes
+```
+module load PDC/21.11
+module load EasyBuild-user/4.5.0
+```
+* Builds into *~/easybuild_user*
+* You must include ~/easybuild_user/modules in Lmod to use installed software
