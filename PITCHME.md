@@ -27,13 +27,13 @@ marp: true
 
 * 2.279 petaFlops (Top500 Nov 2021)
 * 554 CPU nodes
-* Dual AMD EPYC<sup>TM</sup> 64-core processors
+* Dual AMD EPYC(TM) 64-core processors
 
 ### Phase 2: GPU partition
 
 * 56 GPU nodes
-* AMD EPYC<sup>TM</sup> processor with 64 cores
-* four AMD Instinct<sup>TM</sup> MI250X GPUs
+* AMD EPYC(TM) processor with 64 cores
+* four AMD Instinct(TM) MI250X GPUs
 
 ---
 
@@ -88,11 +88,11 @@ Lustre File System (Klemming)
 
 * Good practice
   - Minimize the number of I/O operations
-  - Avoid creating too many les
-  - Avoid creating directories with a large numbers of les
+  - Avoid creating too many files
+  - Avoid creating directories with a large numbers of files
 * Bad practice
   - Small reads
-  - Opening many les
+  - Opening many files
   - Seeking within a le to read a small piece of data
 
 ---
